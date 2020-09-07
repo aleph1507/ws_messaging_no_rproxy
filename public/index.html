@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WS scaling Cloudflare</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div id="join-div">
+            <form action="#" class="form-controls" id="join-form">
+                <input type="text" id="username" value="sample-username">
+
+                <select name="channels" id="channels">
+                    <option value="channel1">Channel 1</option>
+                    <option value="channel2">Channel 2</option>
+                    <option value="channel3">Channel 3</option>
+                    <option value="channel4">Channel 4</option>
+                    <option value="channel5">Channel 5</option>
+                    <option value="channel6">Channel 6</option>
+                    <option value="channel7">Channel 7</option>
+                    <option value="channel8">Channel 8</option>
+                    <option value="channel9">Channel 9</option>
+                    <option value="channel10">Channel 10</option>
+                    <option value="channel11">Channel 11</option>
+                    <option value="channel12">Channel 12</option>
+                    <option value="channel13">Channel 13</option>
+                    <option value="channel14">Channel 14</option>
+                    <option value="channel15">Channel 15</option>
+                    <option value="channel16">Channel 16</option>
+                    <option value="channel17">Channel 17</option>
+                </select>
+
+                <input type="submit" value="Join">
+            </form>
+        </div>
+
+        <div id="controls">
+            <hr class="gray-hr">
+<!--            <button type="button" id="get-channel-users">See channel participants</button>-->
+            <form action="#" class="form-controls" id="auto-form">
+                <label for="nSockets">Number of sockets (to join channel above):</label>
+                <input type="number" value="2" id="nSockets">
+
+                <input type="submit" value="Create">
+            </form>
+
+            <form action="#" class="form-controls" id="auto-msg-form">
+                <label for="nSeconds">Number of seconds:</label>
+                <input type="number" value="5" id="nSeconds">
+
+                <input type="submit" value="Start Messaging">
+            </form>
+        </div>
+
+        <div id="results"></div>
+
+        <div id="msg-div">
+            <hr class="gray-hr">
+            <div id="messages"></div>
+            <form action="#" class="form-controls" id="msg-form">
+                <textarea name="msg" id="msg"></textarea>
+                <input type="submit" value="Send">
+            </form>
+
+        </div>
+    </div>
+    <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.2/qs.min.js"
+            integrity="sha256-TDxXjkAUay70ae/QJBEpGKkpVslXaHHayklIVglFRT4="
+            crossorigin="anonymous"
+    ></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
